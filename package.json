@@ -11,8 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-	"deploy": ”gatsby build && gh-pages -d public --branch master
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
@@ -29,6 +28,7 @@
     "gatsby-transformer-remark": "^2.8.4",
     "gatsby-transformer-sharp": "^2.5.0",
     "jquery": "^3.5.1",
+    "netlify-cli": "^2.58.0",
     "node-sass": "^4.14.1",
     "pug": "^2.0.4",
     "react": "^16.13.1",
