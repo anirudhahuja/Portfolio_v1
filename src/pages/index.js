@@ -18,9 +18,8 @@ const IndexPage = () => {
 
           <div className = "underTitleText">
                 <mark class="colorBlue"> But you can just call me Ani. </mark> <br/> <br/>
-                I'm a student pursuing a Bachelors of Science <br/>
-                in Technology and Information Management at the <br/>
-                University of California, Santa Cruz. 
+                I'm a recent graduate from the University of California, Santa Cruz  <br/>
+                with a Bachelors of Science in Technology and Information Management. <br/>
           </div>
           
         </div>
