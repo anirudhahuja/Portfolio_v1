@@ -1,0 +1,61 @@
+//Header-----------------------------------------------------------
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  .SiteHeader{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      // border-bottom: 3px solid #9DEBE3;
+      transition: top 0.3s;   
+      z-index: 1;
+      box-shadow: 0px 15px 5px 0px rgba(0,0,0,0.1);
+  }
+  
+  .InsideLinks > div {
+      font-size: 16px;
+      box-sizing: border-box;
+      padding: 0 15px;
+      position: relative;
+      left: 40%;
+      float:left;
+  }
+  
+  .OutsideLinks > div {
+      box-sizing: border-box;
+      padding:0 10px;
+      position: relative;
+      right: 20px;
+      top: 5px;
+      float:left;
+  }
+  
+  mark.number{
+      color: #9DEBE3;
+      background:none;
+  }
+  
+  mark.title{
+      font-size: 30px;
+      color: white;
+      background: none;
+  }
+  
+  .Resume_Button {
+      border-color: #D6F1F0;
+      color: white;
+      background-color: rgb(74, 78, 102);
+      font-size: 16px;
+      margin: -10px;
+      padding: 5px 14px;
+      border-radius: 5px;
+  }
+  
+  
+  
+  
