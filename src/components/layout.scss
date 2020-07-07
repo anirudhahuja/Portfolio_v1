@@ -1,20 +1,30 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat);
+@import url(//fonts.googleapis.com/css?family=Roboto_Slab);
+
+* {
+    font-family: Roboto_Slab;
+  }
+
 body {
     background-color: #252c49;
-    color: #E4DCCE
+    color: #E4DCCE;
 }
 
 h1{
     font-weight: normal;
     line-height: 1.5em;
+    font-family: Montserrat;
 }
 
 h3 {
     font-weight: normal;
     line-height: 0;
+    font-family: Montserrat;
 }
 
 h5 {
     font-weight: normal;
+    font-family: Montserrat;
 }
 
 // Hyperlink Style
