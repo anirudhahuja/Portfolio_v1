@@ -10,10 +10,10 @@ const Animation = () => {
     
     minDist = 20,
     maxDist = 70,
-    initialWidth = 5,
+    initialWidth = 3,
     maxLines = 30,
     initialLines = 6,
-    speed = 4,
+    speed = 3,
     
     lines = [],
     frame = 0,
@@ -32,8 +32,8 @@ const Animation = () => {
       [ -.7, -.7]
     ],
     starter = { // starting parent line, just a pseudo line
-      x: 5,
-      y: 5,
+      x: w/2,
+      y: h/2,
       vx: 0,
       vy: 0,
       width: initialWidth

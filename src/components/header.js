@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './layout.scss'
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaBars } from 'react-icons/fa';
 import { Link } from 'gatsby'
 
 if (typeof window !== "undefined") {
@@ -42,46 +42,29 @@ const Header = () => {
                 background: 'rgb(74, 78, 102)',
                 padding: `0.2rem`,
             }}>
-                <div class="InsideLinks">
-
-                    <div>
-                        <mark class="number"> I. </mark> <Link to = "/#indexID"> Home </Link>
-                    </div>
-
-                    <div>
-                        <mark class="number"> II.  </mark> <Link to = "/#aboutID"> About </Link>
-                    </div>
-
-                    <div>
-                        <mark class="number"> III. </mark>  <Link to = "/#portfolioID"> Portfolio </Link>
-                    </div>
-
-                    <div>
-                        <mark class="number"> IV. </mark> <Link to = "/#contactID"> Contact </Link>
-                    </div>
-
+                <div className = "InsideLinks">
+                    <div> <mark class="number"> I. </mark> <Link to = "/#indexID"> Home </Link> </div>
+                    <div> <mark class="number"> II.  </mark> <Link to = "/#aboutID"> About </Link> </div>
+                    <div> <mark class="number"> III. </mark>  <Link to = "/#portfolioID"> Portfolio </Link> </div>
+                    <div> <mark class="number"> IV. </mark> <Link to = "/#contactID"> Contact </Link> </div>
                     <div>
                         <button class="Resume_Button">
                             <a class = "Resume_Button" href = "Resume.pdf" target = "_blank" rel = "noopener noreferrer"> Resume </a>
                         </button>
+                    </div>      
+                </div>
+                <div className = "Menu">
+                    <a href="https://github.com/anirudhahuja" target = "_blank" rel = "noopener noreferrer"> <FaBars color = 'white' size = '1em'/> </a>
+                </div>
+                <div className = "OutsideLinks">     
+                    <div>
+                        <a href="https://github.com/anirudhahuja" target = "_blank" rel = "noopener noreferrer"> <FaGithub color = 'white' size = '1em'/> </a>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/anirudhahuja/" target = "_blank" rel = "noopener noreferrer"> <FaLinkedin color = 'white' size = '1em'/> </a>
                     </div>
                 </div>
-
-                <div class="OutsideLinks">     
-
-                    <div>
-                        <a href="https://github.com/anirudhahuja" target = "_blank" rel = "noopener noreferrer"> 
-                            <FaGithub color = 'white' size = '1em'/> 
-                        </a>
-                    </div>
-
-                    <div>
-                        <a href="https://www.linkedin.com/in/anirudhahuja/" target = "_blank" rel = "noopener noreferrer"> 
-                            <FaLinkedin color = 'white' size = '1em'/> 
-                        </a>
-                    </div>
-
-                </div>
+                
             </header>
         </div>
     )

@@ -75,6 +75,10 @@ canvas {
     height: 100%;
 }
 
+.index-BG {
+    background: #191919;
+}
+
 .index-Section {
     position: absolute;
     top: 50%;
@@ -88,10 +92,6 @@ canvas {
     // padding: 150px 0px;
 }
 
-.index-titleText{
-    
-}
-
 .index-underTitleText{
     font-size: 18px;
 }    
@@ -101,60 +101,61 @@ canvas {
 
 .sticky {
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%
-  }
+}
   
-  .SiteHeader{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      // border-bottom: 3px solid #9DEBE3;
-      transition: top 0.3s;   
-      z-index: 1;
-      box-shadow: 0px 15px 5px 0px rgba(0,0,0,0.1);
-  }
-  
-  .InsideLinks > div {
-      font-size: 16px;
-      box-sizing: border-box;
-      padding: 0 15px;
-      position: relative;
-      left: 40%;
-      float:left;
-  }
-  
-  .OutsideLinks > div {
-      box-sizing: border-box;
-      padding:0 10px;
-      position: relative;
-      right: 20px;
-      top: 5px;
-      float:left;
-  }
-  
-  mark.number{
-      color: #9DEBE3;
-      background:none;
-  }
-  
-  mark.title{
-      font-size: 30px;
-      color: white;
-      background: none;
-  }
-  
-  .Resume_Button {
-      border-color: #D6F1F0;
-      color: white;
-      background-color: rgb(74, 78, 102);
-      font-size: 16px;
-      margin: -10px;
-      padding: 5px 14px;
-      border-radius: 5px;
-  }
-  
+.SiteHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 0.3s;   
+    z-index: 1;
+    box-shadow: 0px 15px 5px 0px rgba(0,0,0,0.1);
+}
+
+.InsideLinks > div {
+    font-size: 16px;
+    padding: 0 15px;
+    position: relative;
+    left: 40%;
+    float:left;
+}
+
+.OutsideLinks > div {
+    padding:0 10px;
+    position: relative;
+    right: 20px;
+    top: 5px;
+    float:left;
+}
+
+.Menu{
+    display: none;
+}
+
+mark.number{
+    color: #9DEBE3;
+    background:none;
+}
+
+mark.title{
+    font-size: 30px;
+    color: white;
+    background: none;
+}
+
+.Resume_Button {
+    border-color: #D6F1F0;
+    color: white;
+    background-color: rgb(74, 78, 102);
+    font-size: 16px;
+    margin: -10px;
+    padding: 5px 14px;
+    border-radius: 5px;
+}
+
   
 //About-------------------------------------------------------------
 
@@ -163,41 +164,42 @@ canvas {
     min-height: 75vh;
     margin: 0px auto;
     padding: 150px 0px;
-}
 
-.aboutTitle{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-    align-items: center;
-    text-shadow: 2px 2px black;
-}
+    .aboutTitle {
+        display: flex;
+        justify-content: center;
+        text-shadow: 2px 2px black;
+    }
 
-.aboutText{
-    padding-top: 50px;
-    max-width: 1000px;
-    font-size: 18px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.imageofMe{
-    padding-left: 50px;
-    padding-top: 50px;
-    width: 800px;
-}
-
-.aboutList{
-    max-width: 250px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 14px;
-    margin-left: -15px;
-    margin-top: 20px;
+    .aboutContainer {
+        display: flex; 
+        position: relative;
+        justify-content: space-between;
+        
+        .aboutText{
+            padding-top: 50px;
+            max-width: 500px;
+            font-size: 18px;
+        }
+    
+        .imageofMe{
+            transform: translate(0%, 20%);
+            width: 30%;
+            min-width: 200px;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    
+    .aboutList{
+        max-width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 16px;
+        margin-left: -15px;
+        margin-top: 20px;
+    }
 }
 
 
@@ -305,4 +307,90 @@ canvas {
     position: relative;
     margin-top: 70px;
     left: 40%;
+}
+
+
+//Responsiveness-------------------------------------------------------------
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    //General
+    h1{
+        font-size: 28px;
+    }
+
+    h3{
+        font-size: 28px;
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        padding: 0;
+        color: grey;
+        background-color: grey;
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    //Index Section
+    .index-Section {
+        width: 70%;
+    }
+
+    .index-underTitleText{
+        font-size: 14px;
+    }    
+
+    //Header Section
+    .InsideLinks > div {
+        display: none;
+    }
+
+    .OutsideLinks > div {
+        position: relative;
+        left: 0%;
+    }
+
+    .Menu {
+        display: block;
+        position: relative;
+        right: 35%;
+        transform: translate(10%, 10%);
+    }
+
+    //About Section
+    .aboutContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        max-width: 300px;
+        left: 50%;
+        transform: translate(-50%);
+        
+        .aboutText {
+            position: relative;
+            max-width: 200px;
+            padding-top: 100px;
+        }
+    
+        .imageofMe {
+            position: relative;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+    }
+    
+    .aboutContainer-2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    //Portfolio Section
+    
 }
