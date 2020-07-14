@@ -3,12 +3,14 @@ import Header from './header'
 import AboutPage from '../pages/about'
 import PortfolioPage from '../pages/portfolio'
 import ContactPage from '../pages/contact'
-import Animation from '../utils/animation'
+
 
 const Layout = (props) => {
     return (
         <div>
-            <Animation />
+            <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            {/* <Animation /> */}
             {props.children}
             <Header />
             <AboutPage />

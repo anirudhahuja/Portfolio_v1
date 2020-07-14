@@ -1,6 +1,5 @@
 import React from "react"
 import '../components/layout.scss'
-import './contact.scss'
 
 const ContactPage = () => {
     return(

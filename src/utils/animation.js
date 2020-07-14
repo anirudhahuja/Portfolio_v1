@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
 import '../components/layout.scss'
-import '../utils/animation.scss'
-
 
 const Animation = () => {
   useEffect(() => {

@@ -1,6 +1,5 @@
 import React from "react"
 import '../components/layout.scss'
-import './about.scss'
 import Photos from "../utils/photos"
 
 const  AboutPage = () => {

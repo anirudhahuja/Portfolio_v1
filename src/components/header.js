@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import './layout.scss'
-import './header.scss'
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'gatsby'
 

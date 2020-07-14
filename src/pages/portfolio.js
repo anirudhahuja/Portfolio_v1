@@ -1,6 +1,5 @@
 import React from "react"
 import '../components/layout.scss'
-import './portfolio.scss'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 

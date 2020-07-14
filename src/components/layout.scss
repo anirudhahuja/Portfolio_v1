@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
+div {
+    display: block;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #252c49;
-    color: #E4DCCE
+    color: #E4DCCE;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 h1{
@@ -53,6 +67,242 @@ mark.colorBlue{
 }
 
 
+//Index-------------------------------------------------------------
+
+canvas {
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+.index-Section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    // min-height: 100vh;
+    // padding: 150px 0px;
+}
+
+.index-titleText{
+    
+}
+
+.index-underTitleText{
+    font-size: 18px;
+}    
 
 
+//Header-----------------------------------------------------------
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  .SiteHeader{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      // border-bottom: 3px solid #9DEBE3;
+      transition: top 0.3s;   
+      z-index: 1;
+      box-shadow: 0px 15px 5px 0px rgba(0,0,0,0.1);
+  }
+  
+  .InsideLinks > div {
+      font-size: 16px;
+      box-sizing: border-box;
+      padding: 0 15px;
+      position: relative;
+      left: 40%;
+      float:left;
+  }
+  
+  .OutsideLinks > div {
+      box-sizing: border-box;
+      padding:0 10px;
+      position: relative;
+      right: 20px;
+      top: 5px;
+      float:left;
+  }
+  
+  mark.number{
+      color: #9DEBE3;
+      background:none;
+  }
+  
+  mark.title{
+      font-size: 30px;
+      color: white;
+      background: none;
+  }
+  
+  .Resume_Button {
+      border-color: #D6F1F0;
+      color: white;
+      background-color: rgb(74, 78, 102);
+      font-size: 16px;
+      margin: -10px;
+      padding: 5px 14px;
+      border-radius: 5px;
+  }
+  
+  
+//About-------------------------------------------------------------
+
+.aboutSection{
+    max-width: 800px;
+    min-height: 75vh;
+    margin: 0px auto;
+    padding: 150px 0px;
+}
+
+.aboutTitle{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    text-shadow: 2px 2px black;
+}
+
+.aboutText{
+    padding-top: 50px;
+    max-width: 1000px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.imageofMe{
+    padding-left: 50px;
+    padding-top: 50px;
+    width: 800px;
+}
+
+.aboutList{
+    max-width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-left: -15px;
+    margin-top: 20px;
+}
+
+
+//Portfolio----------------------------------------------------------
+
+.portfolioSection{
+    max-width: 800px;
+    min-height: 75vh;
+    margin: 0px auto;
+    padding: 150px 0px;
+}
+
+.portfolioTitle{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 2px black;
+}
+
+.portfolioContainer {
+    padding-top: 50px;
+    position: absolute;
+}
+
+.theTabs {
+    position: absolute;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+    // padding-right: 10px;
+    margin: 0px;
+
+    .Tabby {
+        display: inline-block;
+        border: 1px solid transparent;
+        border-bottom: none;
+        bottom: -1px;
+        position: relative;
+        list-style: none;
+        padding: 6px 12px;
+        cursor: pointer;
+        border: 0.1px solid grey;
+        margin: 0px;
+        height: 60px;
+    }
+    
+    .tabText4 {
+        position: absolute;
+        top: 17px;
+    }
+    
+    .tabText5 {
+        position: absolute;
+        top: 17px;
+    }
+}
+
+.thePanel{
+    position: relative;
+    left: 20%;
+    font-size: 18px;
+    padding-left: 25px;
+    width: 700px;
+}
+
+
+//Contact-------------------------------------------------------------
+
+.contactSection {
+    max-width: 800px;
+    min-height: 75vh;
+    margin: 0px auto;
+    padding-top: 200px;
+    padding-bottom: 300px;
+}
+
+.contactTitle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    text-shadow: 2px 2px black;
+}
+
+.contactText {
+    padding-top: 20px;
+    position: relative;
+    text-align: center;
+    left: 150px;
+    width: 450px;
+    font-size: 18px;
+}
+
+.contactButton {
+    border-color: #9DEBE3;
+    color: #9DEBE3;
+    background-color: #252c49;
+    font-size: 20px;
+    margin: -10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 70px;
+    left: 40%;
+}
