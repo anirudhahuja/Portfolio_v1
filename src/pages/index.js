@@ -9,7 +9,7 @@ const IndexPage = () => {
     <Layout>
       <div className = "index-BG">
         <Animation />
-        <div className = "index-Section" id = "indexID">
+        <div className = "index-Section" >
           <div className = "index-titleText">
             <h1> Hello, I'm Anirudh Ahuja. <br/>
                  I'm a Front-end Web Developer. </h1>

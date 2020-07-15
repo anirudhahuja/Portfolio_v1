@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './layout.scss'
-import { FaGithub, FaLinkedin, FaBars } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'gatsby'
 
 if (typeof window !== "undefined") {
@@ -9,6 +9,9 @@ if (typeof window !== "undefined") {
 }
 
 const Header = () => { 
+    const html = document.querySelector('html')
+    const [open, setOpen] = useState(false);
+
     useEffect(() => {
         window.onscroll = function() {myFunction()};
         // Get the header
@@ -34,16 +37,19 @@ const Header = () => {
             }
             prevScrollpos = currentScrollPos;
         }
+        { open ? (html.style.overflow = "hidden") : (html.style.overflow = "visible")};
     });
-    
+
     return (
         <div className = "headerSection">
             <header class = "SiteHeader" id = "myHeader" style = {{
                 background: 'rgb(74, 78, 102)',
                 padding: `0.2rem`,
             }}>
+                
+
                 <div className = "InsideLinks">
-                    <div> <mark class="number"> I. </mark> <Link to = "/#indexID"> Home </Link> </div>
+                    <div> <mark class="number"> I. </mark> <Link to = "#"> Home </Link> </div>
                     <div> <mark class="number"> II.  </mark> <Link to = "/#aboutID"> About </Link> </div>
                     <div> <mark class="number"> III. </mark>  <Link to = "/#portfolioID"> Portfolio </Link> </div>
                     <div> <mark class="number"> IV. </mark> <Link to = "/#contactID"> Contact </Link> </div>
@@ -53,9 +59,31 @@ const Header = () => {
                         </button>
                     </div>      
                 </div>
+
                 <div className = "Menu">
-                    <a href="https://github.com/anirudhahuja" target = "_blank" rel = "noopener noreferrer"> <FaBars color = 'white' size = '1em'/> </a>
+                    <button class = "Menu-Button" onClick = {() => setOpen(!open)}>
+                        {open ? <FaTimes color = 'white' size = '1em'/> : <FaBars color = 'white' size = '1em'/>}
+                        {/* <FaBars color = 'white' size = '1em'/> */}
+                    </button>   
                 </div>
+
+                <nav class = {open ? "navbar" : "navbar-hidden"}>
+                    <ul class = "navbar-nav">
+                        
+                        <div> <mark class="number"> I. </mark> <Link to = "/#indexID" onClick = {() => setOpen(!open)}> Home </Link> </div>
+                        <div> <mark class="number"> II.  </mark> <Link to = "/#aboutID" onClick = {() => setOpen(!open)}> About </Link> </div>
+                        <div> <mark class="number"> III. </mark>  <Link to = "/#portfolioID" onClick = {() => setOpen(!open)}> Portfolio </Link> </div>
+                        <div> <mark class="number"> IV. </mark> <Link to = "/#contactID" onClick = {() => setOpen(!open)}> Contact </Link> </div>
+                        <div>
+                            <button class="Resume_Button">
+                                <a class = "Resume_Button" href = "Resume.pdf" target = "_blank" rel = "noopener noreferrer"> Resume </a>
+                            </button>
+                        </div>      
+                        
+                    </ul>
+                </nav>
+                
+
                 <div className = "OutsideLinks">     
                     <div>
                         <a href="https://github.com/anirudhahuja" target = "_blank" rel = "noopener noreferrer"> <FaGithub color = 'white' size = '1em'/> </a>
@@ -69,5 +97,6 @@ const Header = () => {
         </div>
     )
 }
+
 
 export default Header
