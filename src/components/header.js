@@ -9,10 +9,11 @@ if (typeof window !== "undefined") {
 }
 
 const Header = () => { 
-    const html = document.querySelector('html')
+    
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
+        const html = document.querySelector('html')
         window.onscroll = function() {myFunction()};
         // Get the header
         var header = document.getElementById("myHeader");
