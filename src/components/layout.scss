@@ -225,7 +225,7 @@ mark.title{
     position: absolute;
 }
 
-.theTabs {
+.tabsContainer {
     position: absolute;
     font-size: 15px;
     display: flex;
@@ -234,28 +234,23 @@ mark.title{
     // padding-right: 10px;
     margin: 0px;
 
-    .Tabby {
+    .aTab {
         display: inline-block;
-        border: 1px solid transparent;
         border-bottom: none;
         bottom: -1px;
         position: relative;
         list-style: none;
         padding: 6px 12px;
-        cursor: pointer;
         border: 0.1px solid grey;
         margin: 0px;
         height: 60px;
-    }
-    
-    .tabText4 {
-        position: absolute;
-        top: 17px;
-    }
-    
-    .tabText5 {
-        position: absolute;
-        top: 17px;
+
+        [class*="tabText"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
     }
 }
 
@@ -276,37 +271,40 @@ mark.title{
     margin: 0px auto;
     padding-top: 200px;
     padding-bottom: 300px;
-}
 
-.contactTitle {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-    align-items: center;
-    text-shadow: 2px 2px black;
-}
-
-.contactText {
-    padding-top: 20px;
-    position: relative;
-    text-align: center;
-    left: 150px;
-    width: 450px;
-    font-size: 18px;
-}
-
-.contactButton {
-    border-color: #9DEBE3;
-    color: #9DEBE3;
-    background-color: #252c49;
-    font-size: 20px;
-    margin: -10px;
-    padding: 15px 20px;
-    border-radius: 5px;
-    position: relative;
-    margin-top: 70px;
-    left: 40%;
+    .contactTitle {
+        max-width: 800px;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-shadow: 2px 2px black;
+    }
+    
+    .contactText {
+        padding-top: 20px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        max-width: 500px;
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    .contactButton {
+        border-color: #9DEBE3;
+        color: #9DEBE3;
+        background-color: #252c49;
+        font-size: 20px;
+        margin: -10px;
+        padding: 15px 20px;
+        border-radius: 5px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 70px;
+    } 
 }
 
 
@@ -392,5 +390,72 @@ mark.title{
     }
 
     //Portfolio Section
+
+    .portfolioContainer {
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    .tabsContainer {
+        display: flex;
+        flex-direction: row;
+        padding-right: 20px;
+        width: 100%;
+        // height: 20%;
+        overflow-x: scroll;
+        border-bottom: 0.1px solid grey;
+        
+    }
+
+    .aTab {
+        display: flex;
+        min-width: 150px;
+        max-width: 200px;
+        font-size: 12px;
+        
+        [class*="tabText"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    .thePanel {
+        max-width: 400px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%,0%);
+        padding: 20px;
+    }
     
+    //Contact-------------------------------------------------------------
+
+    .contactSection {
+        padding-top: 600px; 
+        padding-bottom: 100px;
+    }
+
+    .contactTitle {
+        max-width: 500px;
+    }
+
+    .contactText {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        max-width: 300px;
+        padding: 20px;  
+    }
+
+    .contactButton {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%,-30%);
+    }
+
 }

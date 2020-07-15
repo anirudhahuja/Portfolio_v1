@@ -14,12 +14,12 @@ const PortfolioPage = () => {
 
             <div className = "portfolioContainer"> 
                 <Tabs>
-                    <TabList className = "theTabs">
-                        <Tab className = "Tabby"> <div className = "tabText1"> Farmers Insurance </div> </Tab>
-                        <Tab className = "Tabby"> <div className = "tabText2"> Community Bridges </div> </Tab>
-                        <Tab className = "Tabby"> <div className = "tabText3"> Role Playing Gainz </div> </Tab>
-                        <Tab className = "Tabby"> <div className = "tabText4"> Pintos Project </div> </Tab>
-                        <Tab className = "Tabby"> <div className = "tabText5"> This Website </div> </Tab>
+                    <TabList className = "tabsContainer">
+                        <Tab className = "aTab"> <div className = "tabText1"> Farmers Insurance </div> </Tab>
+                        <Tab className = "aTab"> <div className = "tabText2"> Community Bridges </div> </Tab>
+                        <Tab className = "aTab"> <div className = "tabText3"> Role Playing Gainz </div> </Tab>
+                        <Tab className = "aTab"> <div className = "tabText4"> Pintos Project </div> </Tab>
+                        <Tab className = "aTab"> <div className = "tabText5"> This Website </div> </Tab>
                     </TabList>
 
                     <TabPanel className = "thePanel">
