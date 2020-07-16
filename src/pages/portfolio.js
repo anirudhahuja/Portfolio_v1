@@ -62,7 +62,7 @@ const PortfolioPage = () => {
 
                     <TabPanel className = "thePanel">
                         <p>
-                            <h5> Personal Project @ <mark class="colorBlue"> Comfort of my Home </mark> </h5>
+                            <h5> Personal Project @ <mark class="blueColor"> Comfort of my Home </mark> </h5>
                             <ul class = "a">
                                 <li> 
                                     Android Application made in Unity using C#. The goal of the application is to incentivize working out by
@@ -96,7 +96,7 @@ const PortfolioPage = () => {
                     
                     <TabPanel className = "thePanel">
                         <p>
-                            <h5> Personal Project @ <mark class="colorBlue"> Comfort of my Home </mark> </h5>
+                            <h5> Personal Project @ <mark class="blueColor"> Comfort of my Home </mark> </h5>
                             <ul class = "a">
                                 <li> 
                                     Website created using GatsbyJS and React Libraries. Thanks for taking the time to go through it!
