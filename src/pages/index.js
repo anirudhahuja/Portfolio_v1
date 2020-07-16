@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'gatsby'
 import '../components/layout.scss'
 import '../utils/animation.scss'
 import Layout from '../components/layout'
@@ -15,14 +16,15 @@ const IndexPage = () => {
                  I'm a Front-end Web Developer. </h1>
           </div>
           <div className = "index-underTitleText">
-            <mark className = "colorBlue"> But you can just call me Ani. </mark> <br/> <br/>
+            <mark className = "blueColor"> But you can just call me Ani. </mark> <br/> <br/>
             I'm a recent graduate from the University of California, Santa Cruz  <br/>
             with a Bachelors of Science in Technology and Information Management. <br/>
-          </div>
+          </div>  
         </div>
-        {/* <button className = "index-Progression">
-          Check out my Work
-        </button> */}
+        {/* Link to the beginning of About Section */}
+        <Link to = "/#headerID">
+          <button className = "index-Button"> Check out my Work </button>
+        </Link>
       </div>
     </Layout>
   )   

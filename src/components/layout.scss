@@ -41,11 +41,7 @@ a {
 
 }
 
-a.Resume_Button {
-    color: #9DEBE3;
-}
-
-a.port{
+a.blueColor{
     color: #9DEBE3;
 }
 
@@ -61,8 +57,14 @@ ul.a{
     list-style-type: square;
 }
 
-mark.colorBlue{
+mark.blueColor{
     color: #9DEBE3;
+    background: none;
+}
+
+mark.title{
+    font-size: 30px;
+    color: white;
     background: none;
 }
 
@@ -88,13 +90,28 @@ canvas {
     max-width: 900px;
     width: 90%;
     margin: 0 auto;
-    // min-height: 100vh;
-    // padding: 150px 0px;
 }
 
+.index-titleText {
+    text-align: center;
+}
 .index-underTitleText{
     font-size: 18px;
+    text-align: center;
 }    
+
+.index-Button {
+    background: #191919;
+    padding: 10px 24px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    border-radius: 4px;
+    font-family: Montserrat;
+    color: white;
+}
 
 
 //Header-----------------------------------------------------------
@@ -135,26 +152,15 @@ canvas {
     display: none;
 }
 
-mark.number{
-    color: #9DEBE3;
-    background:none;
-}
-
-mark.title{
-    font-size: 30px;
-    color: white;
-    background: none;
-}
 
 .Resume_Button {
     border-color: #D6F1F0;
-    color: white;
+    color: #9DEBE3;
     background-color: rgb(74, 78, 102);
     font-size: 16px;
     margin: -10px;
     padding: 5px 14px;
     border-radius: 5px;
-    
 }
 
 //Dropdown----------------------------------------------------------
@@ -287,7 +293,7 @@ mark.title{
     max-width: 800px;
     min-height: 75vh;
     margin: 0px auto;
-    padding-top: 200px;
+    padding-top: 300px;
     padding-bottom: 300px;
 
     .contactTitle {
@@ -355,12 +361,17 @@ mark.title{
     //Index Section
     .index-Section {
         top: 40%;
-        width: 70%;
+        width: 90%;
+        max-width: 300px;
     }
 
-    .index-underTitleText{
+    .index-underTitleText {
         font-size: 14px;
     }    
+
+    .index-Button {
+        font-size: 0.6rem;
+    }
 
     //Header Section
     .InsideLinks > div {

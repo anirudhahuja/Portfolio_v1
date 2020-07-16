@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import './layout.scss'
-import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'gatsby'
+import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
+import './layout.scss'
 
+//Smooth Scrolling
 if (typeof window !== "undefined") {
     // eslint-disable-next-line global-require
     require("smooth-scroll")('a[href*="#"]')
@@ -16,7 +17,7 @@ const Header = () => {
         const html = document.querySelector('html')
         window.onscroll = function() {myFunction()};
         // Get the header
-        var header = document.getElementById("myHeader");
+        var header = document.getElementById("headerID");
         // Get the offset position of the navbar
         var sticky = header.offsetTop;
         // Get the offset for Y position
@@ -32,9 +33,9 @@ const Header = () => {
                 header.classList.remove("sticky");
             }
             if (prevScrollpos > currentScrollPos) {
-                document.getElementById("myHeader").style.top = "0";
+                document.getElementById("headerID").style.top = "0";
             } else {
-                document.getElementById("myHeader").style.top = "-50px";
+                document.getElementById("headerID").style.top = "-50px";
             }
             prevScrollpos = currentScrollPos;
         }
@@ -43,20 +44,18 @@ const Header = () => {
 
     return (
         <div className = "headerSection">
-            <header class = "SiteHeader" id = "myHeader" style = {{
+            <header class = "SiteHeader" id = "headerID" style = {{
                 background: 'rgb(74, 78, 102)',
                 padding: `0.2rem`,
             }}>
-                
-
                 <div className = "InsideLinks">
-                    <div> <mark class="number"> I. </mark> <Link to = "#"> Home </Link> </div>
-                    <div> <mark class="number"> II.  </mark> <Link to = "/#aboutID"> About </Link> </div>
-                    <div> <mark class="number"> III. </mark>  <Link to = "/#portfolioID"> Portfolio </Link> </div>
-                    <div> <mark class="number"> IV. </mark> <Link to = "/#contactID"> Contact </Link> </div>
+                    <div> <mark class="blueColor"> I. </mark> <Link to = "#"> Home </Link> </div>
+                    <div> <mark class="blueColor"> II.  </mark> <Link to = "/#aboutID"> About </Link> </div>
+                    <div> <mark class="blueColor"> III. </mark>  <Link to = "/#portfolioID"> Portfolio </Link> </div>
+                    <div> <mark class="blueColor"> IV. </mark> <Link to = "/#contactID"> Contact </Link> </div>
                     <div>
                         <button class="Resume_Button">
-                            <a class = "Resume_Button" href = "Resume.pdf" target = "_blank" rel = "noopener noreferrer"> Resume </a>
+                            <a class = "blueColor" href = "Resume.pdf" target = "_blank" rel = "noopener noreferrer"> Resume </a>
                         </button>
                     </div>      
                 </div>
@@ -64,27 +63,21 @@ const Header = () => {
                 <div className = "Menu">
                     <button class = "Menu-Button" onClick = {() => setOpen(!open)}>
                         {open ? <FaTimes color = 'white' size = '1em'/> : <FaBars color = 'white' size = '1em'/>}
-                        {/* <FaBars color = 'white' size = '1em'/> */}
                     </button>   
                 </div>
-
                 <nav class = {open ? "navbar" : "navbar-hidden"}>
-                    <ul class = "navbar-nav">
-                        
-                        <div> <mark class="number"> I. </mark> <Link to = "/#indexID" onClick = {() => setOpen(!open)}> Home </Link> </div>
-                        <div> <mark class="number"> II.  </mark> <Link to = "/#aboutID" onClick = {() => setOpen(!open)}> About </Link> </div>
-                        <div> <mark class="number"> III. </mark>  <Link to = "/#portfolioID" onClick = {() => setOpen(!open)}> Portfolio </Link> </div>
-                        <div> <mark class="number"> IV. </mark> <Link to = "/#contactID" onClick = {() => setOpen(!open)}> Contact </Link> </div>
+                    <ul class = "navbar-nav">  
+                        <div> <mark class="blueColor"> I. </mark> <Link to = "#" onClick = {() => setOpen(!open)}> Home </Link> </div>
+                        <div> <mark class="blueColor"> II.  </mark> <Link to = "/#aboutID" onClick = {() => setOpen(!open)}> About </Link> </div>
+                        <div> <mark class="blueColor"> III. </mark>  <Link to = "/#portfolioID" onClick = {() => setOpen(!open)}> Portfolio </Link> </div>
+                        <div> <mark class="blueColor"> IV. </mark> <Link to = "/#contactID" onClick = {() => setOpen(!open)}> Contact </Link> </div>
                         <div>
                             <button class="Resume_Button">
                                 <a class = "Resume_Button" href = "Resume.pdf" target = "_blank" rel = "noopener noreferrer"> Resume </a>
                             </button>
                         </div>      
-                        
                     </ul>
                 </nav>
-                
-
                 <div className = "OutsideLinks">     
                     <div>
                         <a href="https://github.com/anirudhahuja" target = "_blank" rel = "noopener noreferrer"> <FaGithub color = 'white' size = '1em'/> </a>

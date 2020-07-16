@@ -24,7 +24,7 @@ const PortfolioPage = () => {
 
                     <TabPanel className = "thePanel">
                         <p>
-                            <h5> Software Engineering Intern @ <a class = "port" href="https://www.farmers.com/" target = "_blank" rel = "noopener noreferrer"> 
+                            <h5> Software Engineering Intern @ <a class = "blueColor" href="https://www.farmers.com/" target = "_blank" rel = "noopener noreferrer"> 
                                  Farmers Insurance 
                             </a> </h5>
 
@@ -46,7 +46,7 @@ const PortfolioPage = () => {
 
                     <TabPanel className = "thePanel">
                         <p>
-                            <h5> Software Engineering Intern @ <a class = "port" href="https://communitybridges.org/" target = "_blank" rel = "noopener noreferrer"> 
+                            <h5> Software Engineering Intern @ <a class = "blueColor" href="https://communitybridges.org/" target = "_blank" rel = "noopener noreferrer"> 
                                  Community Bridges
                             </a> </h5>
                             <ul class = "a">
@@ -74,7 +74,7 @@ const PortfolioPage = () => {
                     
                     <TabPanel className = "thePanel">
                         <p>
-                            <h5> Personal Project @ <a class = "port" href="https://www.ucsc.edu/" target = "_blank" rel = "noopener noreferrer"> 
+                            <h5> Personal Project @ <a class = "blueColor" href="https://www.ucsc.edu/" target = "_blank" rel = "noopener noreferrer"> 
                                  UCSC
                             </a> </h5>
                             <ul class = "a">

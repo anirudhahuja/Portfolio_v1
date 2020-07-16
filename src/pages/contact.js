@@ -3,8 +3,8 @@ import '../components/layout.scss'
 
 const ContactPage = () => {
     return(
-        <div className = "contactSection" id = "contactID">
-            <div className = "contactTitle">
+        <div className = "contactSection">
+            <div className = "contactTitle" id = "contactID">
                 <mark class="title"> <h3> Get in Touch </h3> </mark>
             </div>
             <hr/>
