@@ -54,7 +54,7 @@ const Header = () => {
                     <div> <mark class="blueColor"> III. </mark>  <Link to = "/#portfolioID"> Portfolio </Link> </div>
                     <div> <mark class="blueColor"> IV. </mark> <Link to = "/#contactID"> Contact </Link> </div>
                     <div>
-                        <a class = "blueColor" href = "https://drive.google.com/uc?export=download&id=10M8ueAGPcg94hKepJtn3iJX_k1vKSgTf" target = "_blank" rel = "noopener noreferrer"> 
+                        <a class = "blueColor" href = "/Resume.pdf" target = "_blank" rel = "noopener noreferrer"> 
                             <button class="Resume_Button"> Resume </button>
                         </a>
                     </div>      
